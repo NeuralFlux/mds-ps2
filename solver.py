@@ -16,7 +16,7 @@ constraints = [(y - (C @ s)) == 0]
 prob = cp.Problem(objective, constraints)
 
 # The optimal objective value is returned by `prob.solve()`.
-result = prob.solve(solver='OSQP', eps_abs=1.0e-08, eps_rel=1.0e-08, verbose=True)
+result = prob.solve(solver='OSQP', verbose=True)
 print(s.value.shape)
 
 # Load A_inv
